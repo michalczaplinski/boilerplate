@@ -4,18 +4,16 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions';
 
 
-class BookmrkrApp extends Component {
+class MainComponent extends Component {
 
   constructor(props) {
     super(props);
-
   }
 
   render() {
     return (
       <div>
-        hi
-        <div>{this.props.sidebar.isOpen}</div>
+        {this.props.test}
       </div>
     )
   }
@@ -25,7 +23,7 @@ class BookmrkrApp extends Component {
 const Application = connect(
   (state) =>  state,
   (dispatch) => { return { actions: bindActionCreators(actions, dispatch)} }
-)(BookmrkrApp);
+)(MainComponent);
 
 
 export default Application;

@@ -7,14 +7,12 @@ import {render} from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, browserHistory, Route, IndexRoute, IndexRedirect } from 'react-router';
 
-import BookmrkrApp from './components/BookmrkrApp';
+import BookmrkrApp from './components/MainComponent';
 import configureStore from './store/configureStore';
 
 // initial state
 const store = configureStore({
-  sidebar : {
-    isOpen: "fadfds"
-  }
+  test : 'hello Michal'
 });
 
 // root component

@@ -5,17 +5,12 @@ import objectAssign from 'object-assign';
 import * as types from '../actions/actionTypes';
 
 
-function sidebar(state={}, action) {
+function test(state={}, action) {
   switch (action.type) {
 
-    case types.CLOSE_SIDEBAR:
+    case types.TEST:
       return objectAssign({}, state, {
-        isOpen: false
-      });
-
-    case types.OPEN_SIDEBAR:
-      return objectAssign({}, state, {
-        isOpen: true
+        who: "Michal"
       });
 
     default:
@@ -25,5 +20,5 @@ function sidebar(state={}, action) {
 
 
 export default combineReducers({
-  sidebar
+  test
 });
